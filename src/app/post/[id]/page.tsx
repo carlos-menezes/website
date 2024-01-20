@@ -3,7 +3,7 @@ import {
   getSortedPostsMetadata,
   getPostMarkdown,
 } from "@/lib/posts";
-import { Box, Flex, Link, Text } from "@radix-ui/themes";
+import { Box, Flex, Heading, Link, Text } from "@radix-ui/themes";
 import { format } from "date-fns";
 import { Metadata } from "next";
 import Markdown, { Components } from "react-markdown";
@@ -37,10 +37,10 @@ export default async function Page({ params }: PageParams) {
   const data = markdown.data as Frontmatter;
 
   const components: Components = {
-    p: (props) => <Text size="3">{props.children}</Text>,
+    p: (props) => <Text size="2">{props.children}</Text>,
     li: (props) => (
       <li>
-        <Text size="3">{props.children}</Text>
+        <Text size="2">{props.children}</Text>
       </li>
     ),
   };
@@ -49,23 +49,23 @@ export default async function Page({ params }: PageParams) {
     <Flex direction="column" gap="4">
       <Flex direction="column">
         <Text size="2">{format(data.date, "LLL dd, y")}</Text>
-        <Text size="6" weight="bold">
+        <Heading as="h1" size="4" weight="bold">
           {data.title}
-        </Text>
+        </Heading>
       </Flex>
-      <Box>
+      <Flex direction="column" gap="1">
         <Markdown components={components}>{markdown.content}</Markdown>
-      </Box>
+      </Flex>
       {data.tags && (
-        <Text size="3">
+        <Text size="2">
           Tags:{" "}
           {data.tags.map((tag, i) => (
             <>
               <Link key={tag} href={`/tags#${tag}`}>
-                <Text size="3">{tag}</Text>
+                <Text size="2">{tag}</Text>
               </Link>
               {data.tags && i !== data.tags.length - 1 && (
-                <Text size="3">,</Text>
+                <Text size="2">,</Text>
               )}{" "}
             </>
           ))}
