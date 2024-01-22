@@ -34,10 +34,16 @@ export async function generateMetadata({
   const data = post.data;
 
   return {
-    title: `${data.title} - Carlos Menezes`,
-    description: data.description,
     openGraph: {
-      images: [`api/og?title=${data.title}&subtitle=${data.description}`],
+      title: `${data.title} - Carlos Menezes`,
+      images: [
+        {
+          url: `api/og?title=${data.title}&subtitle=${data.description}`,
+          width: 1200,
+          height: 630,
+        },
+      ],
+      description: data.description,
     },
   };
 }
