@@ -1,7 +1,7 @@
 ---
 title: Using AI to retexture a PS2 game
 date: 2024-01-22
-description: Retexturing a Smackdown vs. Raw 2007, on the PS2, using Enhanced Super-Resolution Generative Adversarial Networks
+description: Retexturing Smackdown vs. Raw 2007, on the PS2, using Enhanced Super-Resolution Generative Adversarial Networks
 tags: ["gaming", "ai"]
 ---
 
