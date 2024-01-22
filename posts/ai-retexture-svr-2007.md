@@ -86,7 +86,7 @@ source .env/bin/activate
 pip install git+https://github.com/sberbank-ai/Real-ESRGAN.git
 ```
 
-Afterwards, I copied the script from the project's `README.md` file and tried upscaling the Triangle button texture:
+Afterwards, I copied the script from the project's `README.md` file and tried upscaling a face texture:
 
 ```py
 import torch
