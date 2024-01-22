@@ -13,6 +13,7 @@ export type Frontmatter = {
   title: string;
   date: string;
   tags?: Array<string>;
+  description: string;
 };
 
 export const getSortedPostsMetadata = (): Array<Metadata> => {

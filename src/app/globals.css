@@ -3,3 +3,8 @@
 .radix-themes {
   --default-font-family: var(--font-work-sans);
 }
+
+img + span {
+  margin-top: -64px;
+}
+
