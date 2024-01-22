@@ -37,7 +37,7 @@ export async function generateMetadata({
     title: `${data.title} - Carlos Menezes`,
     description: data.description,
     openGraph: {
-      images: [`/api/og?title=${data.title}&subtitle=${data.description}`],
+      images: [`api/og?title=${data.title}&subtitle=${data.description}`],
     },
   };
 }
