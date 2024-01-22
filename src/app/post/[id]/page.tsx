@@ -10,8 +10,8 @@ import rehypeRaw from "rehype-raw";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vs } from "react-syntax-highlighter/dist/esm/styles/prism";
 import remarkToc from "remark-toc";
-import remarkSlug from "remark-slug";
 import { Metadata } from "next";
+import rehypeSlug from "rehype-slug";
 
 type PageParams = {
   params: {
@@ -32,8 +32,6 @@ export async function generateMetadata({
 }: PageParams): Promise<Metadata> {
   const post = getPostMarkdown(params.id);
   const data = post.data;
-
-  console.log(`/api/og?title=${data.title}&subtitle=${data.description}`);
 
   return {
     title: `${data.title} - Carlos Menezes`,
@@ -149,8 +147,8 @@ export default async function Page({ params }: PageParams) {
       </Flex>
       <Flex direction="column" gap="1">
         <Markdown
-          rehypePlugins={[rehypeRaw]}
-          remarkPlugins={[remarkSlug, remarkToc]}
+          rehypePlugins={[rehypeRaw, rehypeSlug]}
+          remarkPlugins={[remarkToc]}
           components={components}
         >
           {markdown.content}
