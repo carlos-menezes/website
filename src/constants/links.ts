@@ -3,12 +3,12 @@ export type Link = {
   title: string;
 };
 
-type Route = "about" | "posts";
+type Route = "home" | "posts";
 
 const links: Record<Route, Link> = {
-  about: {
+  home: {
     href: "/",
-    title: "About",
+    title: "Home",
   },
   posts: {
     href: "/posts",
@@ -16,5 +16,5 @@ const links: Record<Route, Link> = {
   },
 };
 
-export const navigationLinks = [links.about, links.posts];
+export const navigationLinks = [links.home, links.posts];
 export default links;
