@@ -23,7 +23,7 @@ const Navigation = () => {
           className={ibmPlexMono.className}
           style={{ fontWeight: 600, userSelect: "all" }}
         >
-          ˈkɑːləʊz
+          Carlos Menezes
         </Text>
       </Box>
       <Box>

@@ -18,14 +18,10 @@ export default function Page() {
 
   return (
     <Flex direction="column" gap="3">
-      <Text size="3" className={ibmPlexMono.className} weight="bold">
-        SELECT DATE, TITLE, TAGS FROM POSTS ORDER BY DATE DESC;
-      </Text>
       <Text size="3">
         Collections of thoughts on various topics. View{" "}
         <Link href="/tags">all tags</Link> for a more refined search.
       </Text>
-
       {posts.length ? (
         posts.map(({ id, frontmatter: { date, title, tags } }, i) => (
           <Flex key={i} gap="5" align="center" width="100%">

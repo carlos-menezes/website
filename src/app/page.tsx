@@ -17,10 +17,10 @@ export default function Page() {
   const posts = getSortedPostsMetadata().slice(0, 10);
 
   return (
-    <Flex direction="column" gap="6">
+    <Flex direction="column" gap="8">
       <Flex direction="column" gap="2">
         <Text size="3">
-          Hello. My name is Carlos. Born and raised in Porto Santo, Portugal.
+          My name is Carlos. Born and raised in Porto Santo, Portugal.
         </Text>
         <Text size="3">
           My habit of tinkering with anything and everything as a kid has led to
@@ -32,24 +32,13 @@ export default function Page() {
           </Text>
           .
         </Text>
-      </Flex>
-
-      <Flex direction="column" gap="2">
         <Text size="3">
           This site is my gateway to exploring and writing about topics that
-          cross my mind.
-        </Text>
-        <Text size="3">
-          These topics may range from more technical ones, like diving into the
-          why and how of a project I have built, to more personal ones, like a
-          game or movie review. Each post is tagged appropriately, so you may{" "}
+          cross my mind. Each post is tagged appropriately, so you may{" "}
           <Link href="/tags">filter posts at your discretion</Link>.
         </Text>
       </Flex>
       <Flex direction="column" gap="2">
-        <Text size="3" className={ibmPlexMono.className} weight="bold">
-          SELECT * FROM POSTS ORDER BY DATE DESC LIMIT 10;
-        </Text>
         {posts.map(({ id, frontmatter: { date, title, tags } }, i) => (
           <Flex key={i} gap="5" align="center" width="100%">
             <Text size="2">{format(date, "LLL dd, y")}</Text>
