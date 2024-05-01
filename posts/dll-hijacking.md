@@ -33,7 +33,7 @@ Broadly speaking, the following diagram illustrates the execution flow of a prog
 
 The first part of this process is finding a DLL to hijack. You could do guess work or use a debugger to view what DLLs are loaded, but I've opted for [Sysinternals Procmon](https://learn.microsoft.com/en-us/sysinternals/downloads/procmon), "an advanced monitoring tool for Windows that shows real-time file system, registry and process/thread activity".
 
-Procmon accepts a list of displays filters which allows you to filter the noise of the output. For this particular case, I want to include the following filters:
+Procmon accepts a list of display filters which allows you to filter the noise of the output. For this particular case, I want to include the following filters:
 
 - `PROCCESS NAME    IS  gta_sa.exe  INCLUDE` (only output logs for the `gta_sa.exe` process)
 - `PATH ENDS WITH   .dll    INCLUDE` (only output logs where the path of the object subject to an operation ends in `.dll`)
@@ -147,4 +147,4 @@ Compile for the 32-bit architecture and rename the build artifact to `vorbisFile
 
 <div style="width: 100%; height: 0px; position: relative; padding-bottom: 41.875%;"><iframe src="https://streamable.com/e/0yyo4i?quality=highest" frameborder="0" width="100%" height="100%" allowfullscreen style="width: 100%; height: 100%; position: absolute;"></iframe></div>
 
-I went on an implemented [sa-asi-loader](https://github.com/carlos-menezes/sa-asi-loader) using this very same technique and it works flawlessly, loading mods like the [Windowed Mode](https://github.com/ThirteenAG/III.VC.SA.WindowedMode) mod with no issues.
+I went on and implemented [sa-asi-loader](https://github.com/carlos-menezes/sa-asi-loader) using this very same technique and it works flawlessly, loading mods like the [Windowed Mode](https://github.com/ThirteenAG/III.VC.SA.WindowedMode) mod with no issues.
