@@ -5,7 +5,7 @@ date: 2024-05-01
 tags: ["windows", "systems"]
 ---
 
-Hijacking execution flow by replacing exported methods of a DLL an executable loads on it's startup procedure.
+Hijacking the execution flow of a binary by reexporting methods of a DLL it loads on it's startup procedure.
 
 # Contents
 
