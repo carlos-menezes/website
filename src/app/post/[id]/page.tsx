@@ -55,6 +55,30 @@ export default async function Page({ params }: PageParams) {
   const syntaxTheme = vs;
 
   const components: Components = {
+    h1: (props) => (
+      <Heading
+        id={props.id}
+        ref={undefined}
+        color={undefined}
+        size="6"
+        as="h1"
+        my="2"
+      >
+        {props.children}
+      </Heading>
+    ),
+    h2: (props) => (
+      <Heading
+        id={props.id}
+        ref={undefined}
+        color={undefined}
+        size="5"
+        as="h2"
+        my="2"
+      >
+        {props.children}
+      </Heading>
+    ),
     h3: (props) => (
       <Heading
         id={props.id}
@@ -67,30 +91,7 @@ export default async function Page({ params }: PageParams) {
         {props.children}
       </Heading>
     ),
-    h2: (props) => (
-      <Heading
-        id={props.id}
-        ref={undefined}
-        color={undefined}
-        size="4"
-        as="h2"
-        my="2"
-      >
-        {props.children}
-      </Heading>
-    ),
-    h1: (props) => (
-      <Heading
-        id={props.id}
-        ref={undefined}
-        color={undefined}
-        size="5"
-        as="h1"
-        my="2"
-      >
-        {props.children}
-      </Heading>
-    ),
+
     p: (props) => (
       <Text size="3" style={{ textAlign: "justify" }}>
         {props.children}
@@ -104,13 +105,22 @@ export default async function Page({ params }: PageParams) {
           {...rest}
           PreTag="div"
           language={match[1]}
-          style={syntaxTheme}
+          style={{ ...syntaxTheme }}
           ref={undefined}
         >
           {String(children).replace(/\n$/, "")}
         </SyntaxHighlighter>
       ) : (
-        <code {...rest} className={className}>
+        <code
+          {...rest}
+          className={className}
+          style={{
+            fontSize: 13,
+            background: "#eee",
+            padding: 4,
+            fontFamily: "monospace",
+          }}
+        >
           {children}
         </code>
       );
