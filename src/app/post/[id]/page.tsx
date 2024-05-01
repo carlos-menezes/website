@@ -39,7 +39,7 @@ export async function generateMetadata({
     openGraph: {
       images: [
         {
-          url: `api/og?title=${data.title}&subtitle=${data.description}`,
+          url: `https://www.carlos-menezes.com/api/og?title=${data.title}&subtitle=${data.description}`,
           width: 1200,
           height: 630,
         },

@@ -1,7 +1,7 @@
 ---
 title: Hijack DLLs through proxying
+description: Creating an ASI loader for GTA San Andreas
 date: 2024-05-01
-description: Hijacking execution flow by replacing exported methods of a DLL an executable loads on it's startup procedure.
 tags: ["windows", "systems"]
 ---
 
