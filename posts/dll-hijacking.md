@@ -1,6 +1,6 @@
 ---
 title: Hijack DLLs through proxying
-date: 2024-04-30
+date: 2024-05-01
 description: Hijacking execution flow by replacing exported methods of a DLL an executable loads on it's startup procedure.
 tags: ["windows", "systems"]
 ---
