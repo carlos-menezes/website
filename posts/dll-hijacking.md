@@ -11,7 +11,7 @@ Hijacking the execution flow of a binary by reexporting methods of a DLL it load
 
 # Introduction
 
-I delved into this topic because I wanted to create an [ASI Loader](<https://gtamods.com/wiki/ASI_Loader_(SA)>) for Grand Theft Auto: San Andreas. An ASI Loader, broadly speaking, enables the loading of custom libraries with the `.asi` extension into the game process. During game startup, the loader scans the game's root folder and loads all the files with the corresponding extensions, typically standard dynamic libraries (`.dll`) with renamed extensions. Injected DLLs into a process is a fairly easy process if you use an injector (i.e. [Extreme Injector](https://www.unknowncheats.me/forum/general-programming-and-reversing/213038-extreme-injector-v3-7-a.html)), but that quickly becomes unpractical if you want to (automatically) load multiple DLLs into a process.
+I delved into this topic because I wanted to create an [ASI Loader](<https://gtamods.com/wiki/ASI_Loader_(SA)>) for Grand Theft Auto: San Andreas. An ASI Loader, broadly speaking, enables the loading of custom libraries with the `.asi` extension into the game process. During game startup, the loader scans the game's root folder and loads all the files with the corresponding extensions, typically standard dynamic libraries (`.dll`) with renamed extensions. Injecting DLLs into a process is a fairly easy process if you use an injector (i.e. [Extreme Injector](https://www.unknowncheats.me/forum/general-programming-and-reversing/213038-extreme-injector-v3-7-a.html)), but that quickly becomes unpractical if you want to load multiple DLLs into a process, as you'd have to load them, by hand (automatically impossible through this route), on every start up.
 
 # DLL hijacking in a nutshell
 
