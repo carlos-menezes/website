@@ -39,9 +39,9 @@ Procmon accepts a list of display filters which allows you to filter the noise o
 - `PATH ENDS WITH   .dll    INCLUDE` (only output logs where the path of the object subject to an operation ends in `.dll`)
 - `PATH EXCLUDES    <gta_sa.exe location>   EXCLUDE` (only output logs where the path for the DLL is in the same folder as `gta_sa.exe`)
 
-Given these filters and upon launching `gta_sa.exe`, you will see this output in Procmon ([enlarged](https://media.discordapp.net/attachments/855405899522113536/1234997140669857793/image.png?ex=6632c437&is=663172b7&hm=4a05efff8f633bba8b566deccd044f6803e6b451c30de3bbc26289ece77e9668&=&format=webp&quality=lossless&width=2160&height=904)):
+Given these filters and upon launching `gta_sa.exe`, you will see this output in Procmon ([enlarged](https://i.imgur.com/lHnZeyJ.png)):
 
-![Procmon output](https://media.discordapp.net/attachments/855405899522113536/1234997140669857793/image.png?ex=6632c437&is=663172b7&hm=4a05efff8f633bba8b566deccd044f6803e6b451c30de3bbc26289ece77e9668&=&format=webp&quality=lossless&width=2160&height=904)
+![Procmon output](https://i.imgur.com/lHnZeyJ.png)
 
 We see that `eax.dll` and `vorbis.dll` are successfully loaded from the game's folder. One of these may very well be our target: **we'll go for `vorbisFile.dll`.**
 
