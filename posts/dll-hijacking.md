@@ -145,6 +145,7 @@ BOOL APIENTRY DllMain (
 
 Compile for the 32-bit architecture and rename the build artifact to `vorbisFile.dll` `(a)`. In the root folder, rename the original `vorbisFile.dll` to `vorbisFileHooked.dll`. Copy `(a)` into the root folder. Now, when we run `gta_sa.exe`:
 
-<div style="width: 100%; height: 0px; position: relative; padding-bottom: 41.875%;"><iframe src="https://streamable.com/e/0yyo4i?quality=highest" frameborder="0" width="100%" height="100%" allowfullscreen style="width: 100%; height: 100%; position: absolute;"></iframe></div>
+<div style="width: 100%; height: 0px; position: relative; padding-bottom: 41.875%;"><video controls width="100%">
+<source src="https://i.imgur.com/h8dIV7N.mp4" type="video/mp4"></video></div>
 
 I went on and implemented [sa-asi-loader](https://github.com/carlos-menezes/sa-asi-loader) using this very same technique and it works flawlessly, loading mods like the [Windowed Mode](https://github.com/ThirteenAG/III.VC.SA.WindowedMode) mod with no issues.
