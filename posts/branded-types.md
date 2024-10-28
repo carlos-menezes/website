@@ -13,7 +13,7 @@ Branded types in TypeScript enable the creation of new types by affixing a type 
 
 # Issue
 
-Imagine a scenario where a function generates a hash from a string input. Without the use of branded types, the function signature lacks specificity regarding the nature of the returned string, potentially leading to confusion or misuse in the codebase.
+Imagine a scenario where a function generates a hash from a string input, and another function compares the hashed string to another string. Without the use of branded types, the function signature lacks specificity regarding the nature of the returned string, potentially leading to confusion or misuse in the codebase.
 
 ```ts
 const generateHash = (input: string): string => {
