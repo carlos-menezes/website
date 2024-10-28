@@ -1,9 +1,9 @@
+import Footer from "@/components/molecules/Footer/Footer";
 import Navigation from "@/components/molecules/Navigation/Navigation";
 import { Box, Container, Flex, Separator, Theme } from "@radix-ui/themes";
-import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/molecules/Footer/Footer";
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -36,6 +36,7 @@ export default function RootLayout({
             </Flex>
           </Container>
         </Theme>
+        <Analytics />
       </body>
     </html>
   );
