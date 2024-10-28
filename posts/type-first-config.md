@@ -2,7 +2,7 @@
 title: Type-safe configuration files with TypeScript
 description: A simple, type-safe way to handle configuration files in TypeScript
 date: 2024-10-27
-tags: ["typescript", "javascript"]
+tags: ["typescript"]
 ---
 
 # Contents
