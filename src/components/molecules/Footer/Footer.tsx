@@ -16,7 +16,7 @@ const Footer = () => {
       <Box>
         <Flex gap="3" align="center">
           <Text size="1">
-            <Link href="#top">[top]</Link>
+            <Link href="https://github.com/carlos-menezes">[github]</Link>
           </Text>
         </Flex>
       </Box>
