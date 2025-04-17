@@ -34,6 +34,4 @@ const signup = () => {
 };
 ```
 
-No guessing. No worrying about the order. As your function evolves (i.e. you add new properties to), adding new parameters to an object is low-risk. With positional arguments, it’s a breaking change.
-
-Plus, TypeScript gives you full autocompletion and type safety.
+No guessing. No worrying about the order. Your code is self-documenting. Plus, TypeScript gives you full autocompletion and type safety.
