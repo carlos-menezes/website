@@ -1,5 +1,5 @@
 ---
-title: Single parameter functions
+title: n-params vs single param
 date: 2025-04-17
 ---
 
