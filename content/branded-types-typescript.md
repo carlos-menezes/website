@@ -1,7 +1,6 @@
 ---
 title: Branded types for TypeScript
 date: 2024-05-14
-tags: ["typescript"]
 ---
 
 Branded types in TypeScript help distinguish values that share the same base type but represent different concepts—like raw strings vs. hashes. They act as compile-time tags to prevent misuse.
