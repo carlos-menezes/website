@@ -15,7 +15,7 @@ const signup = () => {
 };
 ```
 
-At a glance, can you tell what each value means? You’re left guessing: what’s `28`? What’s `true`?
+At a glance, can you tell what each value means? You’re left guessing: what’s `28`? What’s `true`? The more parameters you add, the more brittle and confusing this becomes.
 
 Instead, consider using an object parameter:
 
