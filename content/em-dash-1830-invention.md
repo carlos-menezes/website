@@ -1,5 +1,5 @@
 ---
-title: em-dash, a 1830s invention
+title: em-dash, an 1830s invention
 date: 2025-04-17
 ---
 
