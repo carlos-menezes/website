@@ -7,11 +7,13 @@ html {
   color-scheme: dark;
   background: #000;
   font-size: 12px;
-  margin: 4rem;
   line-break: auto;
 
-  @media screen and (min-width: 768px) {
-    max-width: 500px;
+  main {
+    padding: 4rem;
+    @media screen and (min-width: 768px) {
+      max-width: 768px;
+    }
   }
 
   pre {
