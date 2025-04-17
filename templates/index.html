@@ -1,0 +1,83 @@
+{% extends "layout.html" %} {% block styles %}
+<link rel="stylesheet" href="{{ get_url(path='index.css') }}" />
+{% endblock %} {% block content %}
+
+<div class="container">
+  <pre id="photo" class="photo">
+::::-==--=+++++++++++++++
+::-:-==-----==========+++
++:-:-==---+#%@@@@*=======
+--++----=--=++*#%%=-=====
+--+*------=+++**#%+--====
+++**---=+##%#%%%%%---====
+--+*---=-+++++%%%*=---===
+==+*-----=+++*#%%=-----==
+**#+----+***#%%#*------==
+%%%+---=*#++##%%=-------=
+%%#+-+%*=*%%@@@@@+-------
+###*#@@+==+##%@@@@%=-----
++*#%@@+=++*+**@@@@@@@#+=-
+  </pre>
+  <div class="text">
+    <p>
+      CARLOS IS A &lt;<span class="emphasis-text">SOFTWARE ENGINEER</span>&gt;.
+    </p>
+    <p>
+      BASED IN PORTUGAL AT &lt;<span class="emphasis-text"
+        >33.061944, -16.356389</span
+      >&gt;.
+    </p>
+    <p>CURRENTLY AT &lt;<span class="emphasis-text">YACOOBA LABS</span>&gt;.</p>
+  </div>
+
+  <div class="socials">
+    <ul>
+      <li>
+        <a href="https://github.com/carlos-menezes">GITHUB</a>
+      </li>
+      <li>
+        <a target="_blank" href="{{ get_url(path="cv.pdf" )}}">RESUMÉ</a>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <table>
+      {% for post in section.pages %}
+      <tr>
+        <td>
+          <p class="post-date">{{ post.date | date(format="%b %d, %Y") }}</p>
+        </td>
+        <td>
+          <a href="{{ post.permalink }}" class="post-title">{{ post.title }}</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+<script>
+  const pre = document.getElementById("photo");
+  const content = pre.innerText;
+  const wrapped = content
+    .split("\n")
+    .map((line) =>
+      line
+        .split("")
+        .map((char) => `<span>${char}</span>`)
+        .join("")
+    )
+    .join("\n");
+  pre.innerHTML = wrapped;
+
+  // Set the color of each character to white when clicked
+  const spans = pre.querySelectorAll("#photo span");
+  spans.forEach((span) => {
+    span.addEventListener("click", () => {
+      span.style.color = "white";
+    });
+  });
+</script>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %} {% block styles %}
+<link rel="stylesheet" href="{{ get_url(path='page.css') }}" />
+{% endblock %} {% block content %}
+
+<div class="container">
+  <div class="header">
+    <table>
+      <tr>
+        <td>
+          <a href="/" class="post-date">← BACK</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="post-date">{{ page.date | date(format="%b %d, %Y") }}</p>
+        </td>
+        <td>
+          <p class="post-title">{{ page.title }}</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="content">{{ page.content | safe }}</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+* {
+  text-transform: uppercase;
+}
+
+.photo {
+  font-family: monospace;
+  user-select: none;
+  color: #999;
+  line-height: 1;
+  padding: 0 !important;
+
+  span {
+    color: inherit;
+    transition: color 5s ease-out; /* slow disappear */
+  }
+
+  span:hover {
+    color: white;
+    transition: color 0.1s;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.coordinates {
+  letter-spacing: 0px;
+  color: #999;
+  user-select: all;
+}
+
+.emphasis-text {
+  letter-spacing: 0px;
+  color: #999;
+}
+
+.music {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+}
+
+.socials {
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    li a {
+      color: white;
+    }
+  }
+}
