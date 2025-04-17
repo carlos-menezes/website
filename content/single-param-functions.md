@@ -3,7 +3,7 @@ title: Single parameter functions
 date: 2025-04-17
 ---
 
-When writing functions in TypeScript, you either pass arguments individually (`n` params) or group them into a single object. While both are valid, I am yet to find a case were object parameters aren't the better choice.
+When writing functions in TypeScript (and, truthfully, any language that does not support named parameters), you either pass arguments individually (`n` params) or group them into a single object. While both are valid, I am yet to find a case were object parameters aren't the better choice.
 
 Say you call a function which creates a user:
 
