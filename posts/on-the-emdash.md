@@ -1,5 +1,5 @@
 ---
-title: On the em-dash
+title: On the em dash
 date: 2025-06-03
 ---
 
