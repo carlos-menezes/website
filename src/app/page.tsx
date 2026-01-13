@@ -1,65 +1,98 @@
-import Image from "next/image";
+import { getAllPostsFrontmatter } from "../lib/posts";
 
-export default function Home() {
+export default async function Home() {
+  const posts = getAllPostsFrontmatter();
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+    <div className="p-6 max-w-2xl space-y-6">
+      <div>
+        <a href="/" className="font-mono">
+          [/]
+        </a>
+      </div>
+      <div className="space-y-4">
+        <p className="font-semibold">Carlos Menezes</p>
+        <p>
+          Software engineer based out of{" "}
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://en.wikipedia.org/wiki/Portugal"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            Portugal <span className="font-mono">[↗]</span>
           </a>
+          .
+        </p>
+        <p>
+          Working at{" "}
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://www.bentley.com"
+            className="font-mono"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Documentation
+            Bentley Systems <span className="font-mono">[↗]</span>
+          </a>
+          , building next-generation software for infrastructure like bridges,
+          roads, buildings, and utility networks.
+        </p>
+        <p>
+          Contact me at{" "}
+          <a href="mailto:carlos.dm.menezes@gmail.com">
+            carlos.dm.menezes@gmail.com
+          </a>
+          .<br />
+          My CV is available for download{" "}
+          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+            here <span className="font-mono">[↗]</span>
+          </a>
+          .
+        </p>
+        <div className="space-x-2">
+          <a
+            href="https://github.com/carlos-menezes"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub <span className="font-mono">[↗]</span>
+          </a>
+          <span>✦</span>
+          <a
+            href="https://www.linkedin.com/in/cmenezes1998/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn <span className="font-mono">[↗]</span>
           </a>
         </div>
-      </main>
+      </div>
+      <div>
+        {new Array(1).fill("✦").map((value, idx) => (
+          <span
+            key={`symbol-${
+              // biome-ignore lint/suspicious/noArrayIndexKey: no other viable alternative
+              idx
+            }`}
+          >
+            {value}
+          </span>
+        ))}
+      </div>
+      <ul className="space-y-2 w-full">
+        {posts.map((post, index) => (
+          <li key={post.id} className="flex items-center gap-2">
+            <span className="text-white/60 whitespace-nowrap shrink-0 font-mono">
+              {(posts.length - index - 1).toString().padStart(2, "0")}.
+            </span>
+            <a
+              href={`/posts/${post.id}`}
+              className="truncate min-w-0 border-none no-underline"
+            >
+              <span className="text-white">{post.title}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
