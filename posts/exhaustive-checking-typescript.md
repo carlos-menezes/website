@@ -1,5 +1,5 @@
 ---
-title: TypeScript does not enforce exhaustiveness
+title: Forcing TypeScript to be exhaustive
 date: 2026-01-15
 ---
 
