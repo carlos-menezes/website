@@ -60,6 +60,10 @@ li {
   margin-left: 2em;
 }
 
+.posts li {
+  margin-left: 0;
+}
+
 ol {
   list-style: decimal;
 }

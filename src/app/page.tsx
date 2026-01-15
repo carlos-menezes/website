@@ -78,7 +78,7 @@ export default async function Home() {
           </span>
         ))}
       </div>
-      <ol className="space-y-2 w-full">
+      <ol className="space-y-2 w-full posts">
         {posts.map((post, index) => (
           <li key={post.id} className="flex items-center gap-2">
             <span className="text-white/60 whitespace-nowrap shrink-0 font-mono">
