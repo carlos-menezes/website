@@ -82,4 +82,4 @@ Assigning `notification` to `never` is therefore a compile-time assertion: there
 With this in place, adding a new variant to the union forces every switch over it to be updated.
 
 [^incomplete_typescript]: Assuming you want to handle all variants explicitly.
-[^never]: [https://stackoverflow.com/a/54243343](https://stackoverflow.com/a/54243343)
+[^never]: Read more on the `never` type here: [https://stackoverflow.com/a/54243343](https://stackoverflow.com/a/54243343)

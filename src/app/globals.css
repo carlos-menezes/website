@@ -54,7 +54,14 @@ kbd {
 
 ul {
   list-style: disc;
+}
+
+li {
   margin-left: 2em;
+}
+
+ol {
+  list-style: decimal;
 }
 
 .footnotes::before {
