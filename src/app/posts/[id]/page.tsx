@@ -40,6 +40,15 @@ export async function generateMetadata(
   return {
     authors,
     title: `${frontmatter.title} ✦ Carlos Menezes`,
+    openGraph: {
+      images: [
+        {
+          url: `https://carlos-menezes.com/api/og?title=${frontmatter.title}`,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
   };
 }
 
