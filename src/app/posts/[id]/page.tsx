@@ -41,6 +41,9 @@ export async function generateMetadata(
     authors,
     title: `${frontmatter.title} ✦ Carlos Menezes`,
     openGraph: {
+      type: "article",
+      title: frontmatter.title,
+      publishedTime: frontmatter.date.toISOString(),
       images: [
         {
           url: `https://carlos-menezes.com/api/og?title=${frontmatter.title}`,
