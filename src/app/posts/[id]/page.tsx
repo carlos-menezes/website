@@ -1,14 +1,15 @@
-import { getAllPostsFrontmatter, type TPost } from "@/lib/posts";
-import matter from "gray-matter";
-import { Metadata, ResolvingMetadata } from "next";
-import { notFound } from "next/navigation";
 import fs from "node:fs";
 import path from "node:path";
-import Markdown from "react-markdown";
+import matter from "gray-matter";
+import type { Metadata, ResolvingMetadata } from "next";
+import { notFound } from "next/navigation";
+import { MarkdownAsync } from "react-markdown";
+import rehypePrettyCode from "rehype-pretty-code";
 import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import remarkMdx from "remark-mdx";
+import { getAllPostsFrontmatter, type TPost } from "@/lib/posts";
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -75,13 +76,13 @@ export default async function PostPage({
       </div>
       <p>✦</p>
       <div className="space-y-2 normal-case">
-        <Markdown
+        <MarkdownAsync
           remarkPlugins={[remarkGfm, remarkMdx]}
-          rehypePlugins={[rehypeRaw, rehypeSlug]}
+          rehypePlugins={[rehypeRaw, rehypeSlug, rehypePrettyCode]}
           remarkRehypeOptions={{ allowDangerousHtml: true }}
         >
           {content}
-        </Markdown>
+        </MarkdownAsync>
       </div>
     </article>
   );
