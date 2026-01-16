@@ -81,5 +81,25 @@ Assigning `notification` to `never` is therefore a compile-time assertion: there
 
 With this in place, adding a new variant to the union forces every switch over it to be updated.
 
+```ts
+const sendNotification = (notification: Notification) => {
+  switch (notification.type) {
+    case "email":
+      // Send email
+      break;
+    case "sms":
+      // Send SMS
+      break;
+    case "push": // Not adding this case will cause a compile-time error
+      // Send push notification
+      break;
+    default: {
+      const _exhaustive: never = notification;
+      return _exhaustive;
+    }
+  }
+};
+```
+
 [^incomplete_typescript]: Assuming you want to handle all variants explicitly.
 [^never]: Read more on the `never` type here: [https://stackoverflow.com/a/54243343](https://stackoverflow.com/a/54243343)
