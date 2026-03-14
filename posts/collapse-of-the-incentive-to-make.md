@@ -15,7 +15,7 @@ But when a model can scrape your article, summarize it and hand the answer to so
 
 Models are trained on the web—Reddit threads, expert blogs, detailed product reviews—content that existed because real people had a reason to make it. If that reason disappears, the web fills up with AI-generated text instead and the next wave of models trains on that. To be clear, I don't really give a fuck about the quality of the next generation of models, but I do care about the quality of the internet.
 
-The web was<sup>†</sup> the accumulation of people who had something to say and a reason to say it. Maybe the ones who keep making things will be the ones who never needed that reason in the first place: the ones who just wanted to put thoughts somewhere.
+The web was^†^ the accumulation of people who had something to say and a reason to say it. Maybe the ones who keep making things will be the ones who never needed that reason in the first place: the ones who just wanted to put thoughts somewhere.
 
 [^kinda]: For now. There are still [tell-tale signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), but models are getting better at masking them.
 [^secondorder]: A second-order effect is one that is caused not directly by the thing itself, but by its consequences.
