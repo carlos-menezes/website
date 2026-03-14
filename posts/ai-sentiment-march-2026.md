@@ -1,5 +1,5 @@
 ---
-title: My sentiment on AI, March 2026
+title: The good, the bad and the AIgly
 date: 2026-03-07
 ---
 
