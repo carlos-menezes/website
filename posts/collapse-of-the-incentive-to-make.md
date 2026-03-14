@@ -17,5 +17,5 @@ Models are trained on the web—Reddit threads, expert blogs, detailed product r
 
 The web was^†^ the accumulation of people who had something to say and a reason to say it. Maybe the ones who keep making things will be the ones who never needed that reason in the first place: the ones who just wanted to put thoughts somewhere.
 
-[^kinda]: For now. There are still [tell-tale signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), but models are getting better at masking them.
+[^kinda]: For now. There are still [tell-tale signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), but I can only assume models will only get better at masking them.
 [^secondorder]: A second-order effect is one that is caused not directly by the thing itself, but by its consequences.
