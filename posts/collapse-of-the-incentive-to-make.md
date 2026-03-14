@@ -1,6 +1,6 @@
 ---
 title: The collapse of the incentive to make
-date: 2026-03-14
+date: 2026-03-13
 ---
 
 We can no longer easily[^kinda] tell whether we're interacting with a human or a machine. More and more of what gets posted isn't written by people. [For (roughly) every 31 human visits to a website, there is a bot visit](https://www.theregister.com/2026/02/04/ai_bot_traffic_web_browsers/). Reddit, X (more than ever) and even HackerNews are getting flooded with AI-generated spam, karma farming and SEO slop: content that costs essentially nothing to produce and is only getting cheaper.

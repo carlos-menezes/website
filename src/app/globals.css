@@ -38,6 +38,10 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+p {
+  text-align: justify;
+}
+
 a:hover {
   color: white;
   opacity: 1;
@@ -101,4 +105,12 @@ ol {
 
 [data-footnote-ref]::after {
   content: "]";
+}
+
+img {
+  margin: 32px 0 8px 0;
+}
+
+blockquote {
+  margin: 0 0 32px 0;
 }
