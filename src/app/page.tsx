@@ -66,18 +66,6 @@ export default async function Home() {
           </a>
         </div>
       </div>
-      <div>
-        {new Array(1).fill("✦").map((value, idx) => (
-          <span
-            key={`symbol-${
-              // biome-ignore lint/suspicious/noArrayIndexKey: no other viable alternative
-              idx
-            }`}
-          >
-            {value}
-          </span>
-        ))}
-      </div>
       <ol className="space-y-2 w-full posts">
         {posts.map((post, index) => (
           <li key={post.id} className="flex items-center gap-2">
