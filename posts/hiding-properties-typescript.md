@@ -31,7 +31,7 @@ const logger: Logger = {
 logger._context = { userId: 123 }; // Nothing stops this
 ```
 
-An `unique symbol`, however, can make that boundary stronger and the logger can still store the context as a regular object property:
+An `unique symbol`, however, can make that boundary stronger and the logger can still store the context as a regular object property
 
 
 ```ts
@@ -52,7 +52,7 @@ const createLogger = (
 });
 ```
 
-Code inside the module can access the property using the symbol:
+Unlike `string` keys, `symbols` are unique values. A symbol-keyed property can only be accessed with the same symbol instance. By keeping that symbol inside the module, consumers have no direct reference to the property key. Code inside the module can access the property using the symbol:
 
 ```ts
 export const createChildLogger = (
