@@ -1,5 +1,5 @@
 ---
-title: Hiding object properties in TypeScript
+title: Hiding internal state in TypeScript objects
 date: 2026-08-20
 ---
 
