@@ -157,7 +157,15 @@
 
 code {
   font-family: var(--font-geist-mono);
-  background-color: var(--color-background);
+  background-color: transparent;
+}
+
+pre {
+  background-color: transparent !important;
+}
+
+pre span[style*="color:#96D0FF"] {
+  color: var(--foreground) !important;
 }
 
 pre {
