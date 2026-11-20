@@ -30,4 +30,4 @@ const signup = () => {
 };
 ```
 
-No guessing. No worrying about the order. Your code is self-documenting. Plus, TypeScript gives you full autocompletion and type safety.
+No worrying about the order. Your code is self-documenting. Plus, TypeScript gives you full autocompletion and type safety.
