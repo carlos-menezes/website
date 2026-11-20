@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
+import { cn } from "@/lib/utils";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   weight: ["400", "700"],
-});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  weight: ["100", "400", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -27,12 +25,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn("dark")}>
       <body
-        className={`${geistMono.variable} ${geistSans.variable} antialiased`}
+        className={`${inter.className} ${geistMono.variable} ${inter.variable} antialiased`}
       >
         <Analytics />
-        {children}
+        <div className="px-8 max-w-3xl mx-auto my-24">{children}</div>
       </body>
     </html>
   );

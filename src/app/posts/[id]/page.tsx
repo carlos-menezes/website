@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { format } from "date-fns";
 import matter from "gray-matter";
 import type { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
@@ -77,25 +78,18 @@ export default async function PostPage({
   return (
     <article className="space-y-4">
       <div>
-        <h1 className="font-semibold">{frontmatter.title}</h1>
-        <time className="text-white/60 whitespace-nowrap shrink-0 font-mono">
-          {frontmatter.date.toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "short",
-            day: "2-digit",
-          })}
-        </time>
+        <p>{frontmatter.title} </p>
+        <p className="text-muted-foreground">
+          {format(frontmatter.date, "MMMM dd, yyyy")}
+        </p>
       </div>
-      <p>✦</p>
-      <div className="space-y-2 normal-case">
-        <MarkdownAsync
-          remarkPlugins={[remarkGfm, remarkMdx]}
-          rehypePlugins={[rehypeRaw, rehypeSlug, rehypePrettyCode]}
-          remarkRehypeOptions={{ allowDangerousHtml: true }}
-        >
-          {content}
-        </MarkdownAsync>
-      </div>
+      <MarkdownAsync
+        remarkPlugins={[remarkGfm, remarkMdx]}
+        rehypePlugins={[rehypeRaw, rehypeSlug, rehypePrettyCode]}
+        remarkRehypeOptions={{ allowDangerousHtml: true }}
+      >
+        {content}
+      </MarkdownAsync>
     </article>
   );
 }
